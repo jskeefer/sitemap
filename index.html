@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--
+         basic html meta tags and progressive web app manifest
+         -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>My App</title>
+	<!--load core scripts-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.0/webcomponents-lite.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="/sitemap.js"></script>
+    <!--load active theme common files-->
+    <link rel="import" href="/theme/load-theme-files.html">
+</head>
+<body>
+    <!--start html template view-->
+    <section id="init-layout" data-layoutid=""></section>
+	<script>sitemap.init();</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<template id="page-home">
+	<!--page styles-->
+	<style></style>
+	<!--page content-->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				Hello World!
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<section id="sectionLoadTemplate"></section>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<section id="sectionLoadTemplateJson"></section>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col-md-12">
+				<section id="sectionLoadTemplateJsonCallback"></section>
+				<section id="sectionLoadTemplateJsonCallbackEmbed"></section>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col-md-12">
+				<section id="sectionLoadPageTemplateExample"></section>
+			</div>
+		</div>		
+	</div>
+	<!--page templates-->	
+	<template id="pageTemplateExample"><span>Page Template Loaded!</span></template>
+	<!--page scipts-->
+    <script>
+		/*
+			sitemap method: 
+			sitemap.loadTemplate('sectionid','templateid','templateurl',json,function(){});
+			description:
+			loads templates from different folders into the page
+		*/
+		//example how to load a external template section into the page
+		sitemap.loadTemplate('sectionLoadTemplate','section-test',sitemap.config.templatesSections);
+		//example of template with json passed into it
+		sitemap.loadTemplate('sectionLoadTemplateJson','section-test-json',sitemap.config.templatesSections,{'hello':'Hello Section!'});
+		//example of template with a callback function 
+		sitemap.loadTemplate('sectionLoadTemplateJsonCallback','section-test-json-callback',sitemap.config.templatesSections,{'hello':'Hello Section 2!'},function(){
+			sitemap.loadTemplate('sectionLoadTemplateJsonCallbackEmbed','section-test-json-callback-embed',sitemap.config.templatesSections);
+		});
+		/*
+			sitemap method: 
+			sitemap.pageTemplate('sectionid','templateid',json,function(){});
+			description:
+			loads templates from this page 
+		*/
+		//example of basic page template load
+		sitemap.pageTemplate('#sectionLoadPageTemplateExample','#pageTemplateExample');
+		//example of json data into the page template
+		sitemap.pageTemplate('#sectionLoadPageTemplateExample','#pageTemplateExample');
+	</script>
+</template>

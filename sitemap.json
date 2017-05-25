@@ -1,0 +1,16 @@
+{
+    "home" : { 
+        "layoutid" : "layout-main",
+        "templateid" : "page-home"
+    },
+	"about" : { 
+        "layoutid" : "layout-main",
+        "templateid" : "page-about",
+		"subviews" : {
+			"*" : { 
+				"layoutid" : "layout-main",
+				"templateid" : "page-about-variable"
+			}		
+		}
+    }
+}

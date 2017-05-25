@@ -1,0 +1,6 @@
+{
+    "templatesLayouts": "/templates/layouts/",
+	"templatesPages": "/templates/pages/",
+	"templatesModules": "/templates/modules/",
+	"templatesSections": "/templates/sections/"
+}

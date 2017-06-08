@@ -55,6 +55,10 @@ var sitemap = {
 				}
 			});
 		});
+		//check if theme or modules have an beforeLoadRoute function invoked
+		if (typeof beforeLoadRoute == 'function') { 
+			beforeLoadRoute(loadPage);
+		}
 		//send results to page auth functon to see if it is restricted		
 		if(!sitemap.checkLayoutLoaded(loadPage)){
 			//load layout template
